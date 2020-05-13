@@ -55,7 +55,7 @@
             android:icon="@drawable/donation_icon">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://www.paypal.com/paypalme2/00day0"/>
+                android:data="https://www.paypal.me/UmadeviS"/>
         </Preference>
 
     </PreferenceCategory>
@@ -65,8 +65,13 @@
         android:title="@string/devs_category" >
 
         <Preference
+            android:title="AshutoshSundresh"
+            android:summary="ExtendedReborn Lead Developer">
+        </Preference>
+
+        <Preference
             android:title="cfdddd / 00day0"
-            android:summary="ROM Developer\nXiaomi Mi 9 maintainer">
+            android:summary="Extended-UI Lead Developer">
         </Preference>
 
     </PreferenceCategory>
