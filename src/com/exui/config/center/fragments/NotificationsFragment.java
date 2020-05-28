@@ -41,7 +41,6 @@ public class NotificationsFragment extends SettingsPreferenceFragment
     public static final String TAG = "NotificationsFragment";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
-    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
@@ -85,10 +84,6 @@ public class NotificationsFragment extends SettingsPreferenceFragment
                 && !getResources().getBoolean(
                         com.android.internal.R.bool.config_intrusiveBatteryLed)) {
             prefScreen.removePreference(mChargingLeds);
-        }
-        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
-        if (!Utils.isVoiceCapable(getActivity())) {
-            prefScreen.removePreference(incallVibCategory);
         }
     }
 
