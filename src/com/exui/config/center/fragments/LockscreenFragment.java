@@ -50,6 +50,14 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
         mResolver = getActivity().getContentResolver();
 
+        boolean enableScreenOffFOD = getContext().getResources().
+                getBoolean(com.android.internal.R.bool.config_supportScreenOffFod);
+        Preference ScreenOffFODPref = (Preference) findPreference("fod_gesture");
+
+        if (!enableScreenOffFOD){
+            overallPreferences.removePreference(ScreenOffFODPref);
+        }
+
         if (!getResources().getBoolean(com.android.internal.R.bool.config_supportsInDisplayFingerprint)) {
             prefScreen.removePreference(findPreference("fod_category"));
         }
