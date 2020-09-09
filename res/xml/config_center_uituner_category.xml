@@ -105,6 +105,14 @@
             android:summary="@string/brightness_slider_qs_unexpanded_summary"
             android:defaultValue="false" />
 
+    <ListPreference
+        android:key="brightness_slider_style"
+        android:title="@string/brightness_slider_style_title"
+        android:entries="@array/brightness_slider_style_selector_entries"
+        android:entryValues="@array/brightness_slider_style_selector_values"
+        android:dependency="brightness_slider_qs_unexpanded"
+        android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

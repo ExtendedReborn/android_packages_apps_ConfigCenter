@@ -53,7 +53,9 @@ public class UITunerFragment extends SettingsPreferenceFragment
 
     private ContentResolver mResolver;
     private static final String SWITCH_STYLE = "switch_style";
+    private static final String BRIGHTNESS_SLIDER_STYLE = "brightness_slider_style";
     private ListPreference mSStyle;
+    private ListPreference mBrightnessSliderStyle;
 
     private IOverlayManager mOverlayManager;
 
@@ -92,6 +94,36 @@ public class UITunerFragment extends SettingsPreferenceFragment
                     }
                     if (valueIndex > 0) {
                         handleOverlays(ThemesUtils.SWITCH_THEMES[valueIndex],
+                                true, mOverlayManager);
+                    }
+                    return true;
+                }
+                return false;
+            }
+       });
+
+        mBrightnessSliderStyle = (ListPreference) findPreference(BRIGHTNESS_SLIDER_STYLE);
+        int BrightnessSliderStyle = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.BRIGHTNESS_SLIDER_STYLE, 0);
+        int BrightnessSliderStyleValue = getOverlayPosition(ThemesUtils.BRIGHTNESS_SLIDER_THEMES);
+        if (BrightnessSliderStyleValue != 0) {
+            mBrightnessSliderStyle.setValue(String.valueOf(BrightnessSliderStyle));
+        }
+        mBrightnessSliderStyle.setSummary(mBrightnessSliderStyle.getEntry());
+        mBrightnessSliderStyle.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                if (preference == mBrightnessSliderStyle) {
+                    String value = (String) newValue;
+                    Settings.System.putInt(getActivity().getContentResolver(), Settings.System.BRIGHTNESS_SLIDER_STYLE, Integer.valueOf(value));
+                    int valueIndex = mBrightnessSliderStyle.findIndexOfValue(value);
+                    mBrightnessSliderStyle.setSummary(mBrightnessSliderStyle.getEntries()[valueIndex]);
+                    String overlayName = getOverlayName(ThemesUtils.BRIGHTNESS_SLIDER_THEMES);
+                    if (overlayName != null) {
+                    handleOverlays(overlayName, false, mOverlayManager);
+                    }
+                    if (valueIndex > 0) {
+                        handleOverlays(ThemesUtils.BRIGHTNESS_SLIDER_THEMES[valueIndex],
                                 true, mOverlayManager);
                     }
                     return true;
