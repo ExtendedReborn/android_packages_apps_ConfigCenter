@@ -21,13 +21,20 @@
     <PreferenceCategory
         android:key="fod_category"
         android:title="@string/fod_category">
-
+        
         <!-- FOD icon picker -->
         <Preference
             android:key="fod_icon_picker_category"
             android:title="@string/fod_icon_picker_title"
             android:summary="@string/fod_icon_picker_summary"
             android:fragment="com.exui.config.center.fragments.FODIconPickerFragment" />
+
+        <!-- FOD pressed state picker -->
+        <Preference
+            android:key="fod_pressed_state_picker_category"
+            android:title="@string/fod_pressed_state_picker_title"
+            android:summary="@string/fod_pressed_state_picker_summary"
+            android:fragment="com.exui.config.center.fragments.FODPressedStatePickerFragment" />
 
         <!-- FOD use wallpaper color -->
         <com.exui.config.center.preferences.SystemSettingSwitchPreference
@@ -50,16 +57,6 @@
                 android:entryValues="@array/fod_recog_animation_values"
                 android:defaultValue="0"
                 android:dependency="fod_recognizing_animation" />
-
-
-        <com.exui.config.center.preferences.SystemSettingListPreference
-            android:key="fod_pressed_state"
-            android:dialogTitle="@string/fod_pressed_state_title"
-            android:title="@string/fod_pressed_state_title"
-            android:summary="%s"
-            android:entries="@array/fod_pressed_state_entries"
-            android:entryValues="@array/fod_pressed_state_values"
-            android:defaultValue="0" />
 
      <com.exui.config.center.preferences.SystemSettingSwitchPreference
         android:key="fod_gesture"
