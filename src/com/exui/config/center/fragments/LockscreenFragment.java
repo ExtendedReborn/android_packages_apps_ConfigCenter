@@ -38,11 +38,13 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
     public static final String TAG = "LockscreenFragment";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FINGERPRINT_VIBING = "fingerprint_vibing";
     private static final String FP_KEYSTORE = "fp_unlock_keystore";
 
     private ContentResolver mResolver;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private SystemSettingSwitchPreference mFingerprintVibing;
     private SystemSettingSwitchPreference mFingerprintUnlock;
 
     @Override
@@ -68,8 +70,10 @@ public class LockscreenFragment extends SettingsPreferenceFragment
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
+        mFingerprintVibing = (SystemSettingSwitchPreference) findPreference(FINGERPRINT_VIBING);
         if (mFingerprintManager == null){
             prefScreen.removePreference(mFingerprintVib);
+            prefScreen.removePreference(mFingerprintVibing);
         } else {
             mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
