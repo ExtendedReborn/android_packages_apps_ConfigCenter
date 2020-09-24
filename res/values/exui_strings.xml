@@ -325,10 +325,12 @@
     <string name="fod_recog_animation_op_stripe">OnePlus Stripe</string>
     <string name="fod_recog_animation_op_wave">OnePlus Wave</string>
     <string name="fod_recog_animation_op_ripple">OnePlus Ripple</string>
+    <string name="fod_recog_animation_oppo_elemental">Oppo Elemental</string>
     <string name="fod_recog_animation_coloros7_1">ColorOS7 1</string>
     <string name="fod_recog_animation_coloros7_2">ColorOS7 2</string>
     <string name="fod_recog_animation_miui_aurora">MIUI Aurora</string>
     <string name="fod_recog_animation_miui_whirlwind">BlackShark Whirlwind</string>
+    <string name="fod_recog_animation_blackshark_mirage">BlackShark Mirage</string>
     <string name="fod_recog_animation_miui_nebula">BlackShark Nebula</string>
     <string name="fod_recog_animation_realmecloud">Realme Cloud</string>
     <string name="fod_recog_animation_realmeripple">Realme Ripple</string>
@@ -337,6 +339,8 @@
     <string name="fod_recog_animation_rogsupernova">ROG Supernova</string>
     <string name="fod_recog_animation_vivoendless">Vivo Endless</string>
     <string name="fod_recog_animation_xiaomi_minimal">Xiaomi Minimal</string>
+    <string name="fod_recog_animation_zte_linewave">ZTE Linewave</string>
+    <string name="fod_recog_animation_zte_polar_lights">ZTE Polar Lights</string>
 
     <string name="enable_oneui">OneUI</string>
     <string name="enable_oneui_summary">Show spacer above settings actionbar for easier use with one hand\nNOTE: Restart settings app to see effect</string>

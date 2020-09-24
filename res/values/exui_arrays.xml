@@ -298,6 +298,7 @@
         <item>@string/fod_recog_animation_op_stripe</item>
         <item>@string/fod_recog_animation_op_wave</item>
         <item>@string/fod_recog_animation_op_ripple</item>
+        <item>@string/fod_recog_animation_oppo_elemental</item>
         <item>@string/fod_recog_animation_pureview_future</item>
         <item>@string/fod_recog_animation_pureview_molecular</item>
         <item>@string/fod_recog_animation_pureview_dna</item>
@@ -306,6 +307,7 @@
         <item>@string/fod_recog_animation_coloros7_2</item>
         <item>@string/fod_recog_animation_bluefirework</item>
         <item>@string/fod_recog_animation_miui_whirlwind</item>
+        <item>@string/fod_recog_animation_blackshark_mirage</item>
         <item>@string/fod_recog_animation_miui_nebula</item>
         <item>@string/fod_recog_animation_realmecloud</item>
         <item>@string/fod_recog_animation_realmeripple</item>
@@ -314,6 +316,8 @@
         <item>@string/fod_recog_animation_rogsupernova</item>
         <item>@string/fod_recog_animation_vivoendless</item>
         <item>@string/fod_recog_animation_xiaomi_minimal</item>
+        <item>@string/fod_recog_animation_zte_linewave</item>
+        <item>@string/fod_recog_animation_zte_polar_lights</item>
     </string-array>
 
     <string-array name="fod_recog_animation_values" translatable="false">
@@ -334,6 +338,7 @@
         <item>15</item>
         <item>16</item>
         <item>17</item>
+        <item>36</item>
         <item>9</item>
         <item>10</item>
         <item>14</item>
@@ -342,6 +347,7 @@
         <item>19</item>
         <item>12</item>
         <item>21</item>
+        <item>33</item>
         <item>22</item>
         <item>23</item>
         <item>24</item>
@@ -350,6 +356,8 @@
         <item>31</item>
         <item>28</item>
         <item>32</item>
+        <item>34</item>
+        <item>35</item>
     </string-array>
 
     <!-- Battery bar -->
