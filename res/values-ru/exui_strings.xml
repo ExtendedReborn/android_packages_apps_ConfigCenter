@@ -496,7 +496,7 @@
     <string name="notification_guts_kill_app_button_summary">Показать кнопку удаления приложения в меню при длительном нажатия уведомлений</string>
 	
 	<string name="wakeup_when_plugged_unplugged_title">Активация экрана от подключения зарядки</string>
-    <string name="wakeup_when_plugged_unplugged_summary">Активация экрана, если зарядное устройство подключено / отключено</strin
+    <string name="wakeup_when_plugged_unplugged_summary">Активация экрана, если зарядное устройство подключено / отключено</string>
 	
 	   <!-- Ambient battery -->
     <string name="ambient_battery_percent_title">Уровень заряда внизу</string>
